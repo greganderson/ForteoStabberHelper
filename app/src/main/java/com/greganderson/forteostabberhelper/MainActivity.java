@@ -35,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
         MutableDateTime epoch = new MutableDateTime();
         epoch.setDate(0);
         DateTime now = new DateTime();
-        int days = Days.daysBetween(epoch, now).getDays() - 4;  // -4 is the right offset for the current setup
+        int offset = 4; // Offset for when things align
+        int days = Days.daysBetween(epoch, now).getDays() - offset;
         int lifeOfPen = 28 - (days % 28);
-        int position = (days + 1) % placements.length;  // +1 is the right offset to line things up
+        int position = (days + offset) % placements.length;
 
         if (lifeOfPen == 1)
             alert.setText("LAST DAY WITH THIS PEN");
