@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ForteoStabberHelper</string>
+    <string name="pens_last_day">"LAST DAY WITH THIS PEN"</string>
+    <string name="new_pen">NEW PEN TODAY</string>
 </resources>
